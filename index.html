@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Hello World!</title>
+    </head>
+    <body>
+
+        <h1>Ini Adalah Web Gueh!</h1>
+        <nav class="nav">
+            <a href="">Home</a>
+            <a class="mode" >Mode</a>
+        </nav>
+    
+    </body>
+    <script >
+
+    const mode = document.querySelector(".mode");
+    const nav = document.querySelector('.nav');
+    const a = document.getElementsByTagName('a');
+    const body = document.body;
+
+    mode.addEventListener('click', function(){
+        const newA = Array.from(a);
+
+        body.classList.toggle('dark');
+        nav.classList.toggle('white');
+
+        if( body.classList.contains('dark') ){
+            newA.forEach(e => {
+                e.style.color = '#222222';
+            });
+        }else{
+            newA.forEach(e => {
+                e.style.color = 'white';
+            });
+        }
+
+
+    });
+        
+    </script>
+</html>
