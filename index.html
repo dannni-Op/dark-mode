@@ -9,7 +9,7 @@
         <h1>Ini Adalah Web Gueh!</h1>
         <nav class="nav">
             <a href="">Home</a>
-            <a class="mode" >Mode</a>
+            <a class="mode" >Mode - Dark</a>
         </nav>
     
     </body>
@@ -25,16 +25,20 @@
 
         body.classList.toggle('dark');
         nav.classList.toggle('white');
-
+        
+        newA[1].textContent = "Mode - Dark";
         if( body.classList.contains('dark') ){
             newA.forEach(e => {
                 e.style.color = '#222222';
             });
-        }else{
-            newA.forEach(e => {
-                e.style.color = 'white';
-            });
+            
+            newA[1].textContent = "Mode - Light";
+            return;
         }
+        newA.forEach(e => {
+            e.style.color = 'white';
+        });
+        
 
 
     });
