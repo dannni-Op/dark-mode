@@ -18,6 +18,7 @@ body{
     width: 100vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #f8f9fa;
     color: #222;
@@ -50,4 +51,23 @@ a{
 a:hover{
     background-color: tomato;
     cursor: pointer;
+}
+
+img{
+    width: 200px;
+    position: relative;
+    margin-bottom: 50px;
+    animation: jedagJedug 1s infinite;
+}
+
+@keyframes jedagJedug{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
